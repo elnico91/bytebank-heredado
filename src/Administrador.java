@@ -1,13 +1,18 @@
 public class Administrador extends Funcionario implements Autenticable {
 
     private String clave;
+    private AutenticacionUtil util;
+
+    public Administrador() {
+        this.util = new AutenticacionUtil();
+    }
 
     public void setClave(String clave) {
-        this.clave = clave;
+        this.util.setClave(clave);
     }
 
     public Boolean iniciarSesion(String clave) {
-        return clave.equals("AluraCursosOnLine");
+        return this.util.iniciarSesion(clave);
     }
 
 //    public double getBonificacion() {
@@ -17,7 +22,7 @@ public class Administrador extends Funcionario implements Autenticable {
 
     @Override
     public double getBonificacion() {
-        return 0;
+        return this.getSalario();
     }
 
 }

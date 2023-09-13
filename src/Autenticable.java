@@ -1,7 +1,7 @@
-public abstract interface Autenticable {
+public interface Autenticable {
 
-    public abstract void setClave(String clave);
+    public void setClave(String clave);
 
-    public abstract Boolean iniciarSesion(String clave);
+    public Boolean iniciarSesion(String clave);
 
 }
