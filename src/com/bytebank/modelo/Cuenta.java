@@ -1,3 +1,5 @@
+package com.bytebank.modelo;
+
 public abstract class Cuenta {
 
     protected double saldo;
@@ -16,7 +18,7 @@ public abstract class Cuenta {
 
     public abstract void deposita(double valor);
 
-    public void saca(double valor) throws SaldoInsuficienteException{
+    public void saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
             throw new SaldoInsuficienteException("No tienes saldo");
         } else {

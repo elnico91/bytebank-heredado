@@ -1,3 +1,7 @@
+package com.bytebank.test;
+
+import com.bytebank.modelo.*;
+
 public class TestReferencias {
 
     public static void main(String[] args) {
